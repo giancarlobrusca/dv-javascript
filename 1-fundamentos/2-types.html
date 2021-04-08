@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 - TYPES</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // JS es un lenguaje sin tipado (o débilmente tipado)
+        // Permite declarar variables en él sin asignarles un tipo de dato
+        // e incluso esas variables pueden cambiar de tipo de dato porque no están ligadas a él.
+        
+        var a; // Asigno variable sin tipo de dato.
+        var a = 6; // Le asigno un number
+
+        var b = a + '6' // conversión implícita (a se está transformando en string)
+
+        console.log('tipo de valor de a:', typeof a)
+        console.log('tipo de valor de b:', typeof b)
+        console.log(b)
+
+        // + permite unir strings
+        // + también permite sumas numbers
+
+        var c = a + Number('5') // conversión explícita -> convierto '5' a number.
+        console.log(c)
+
+        console.log(6 + 6)
+        console.log(String(6) + String(6))
+
+        // Ejemplo de caso en que la conversion implícita sirve:
+        var wallet = 12.50 // Tengo 12.50 pesos
+        console.log('$' + wallet) // Puedo agregarl el signo adelante para imprimirlo sin problema
+    </script>
+</body>
+</html>

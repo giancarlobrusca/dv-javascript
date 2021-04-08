@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 - CONDITIONALS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // IS LESS OR IS GREATER
+        
+        var mathRandomNumber = Math.random()
+
+        // console.log(mathRandomNumber) -> Imprime siempre un valor aleatorio entre 0 y 1 (nunca 1)
+
+        if (mathRandomNumber <= 0.5) {
+            console.log(mathRandomNumber, ' is less than 0.5')
+        } else {
+            console.log(mathRandomNumber, ' is greater than 0.5')
+        }
+
+        // Si queremos que esto suceda más de una vez tenemos que repetirlo
+
+        mathRandomNumber = Math.random()
+        if (mathRandomNumber <= 0.5) {
+            console.log(mathRandomNumber, ' is less than 0.5')
+        } else {
+            console.log(mathRandomNumber, ' is greater than 0.5')
+        }
+
+        mathRandomNumber = Math.random()
+        if (mathRandomNumber <= 0.5) {
+            console.log(mathRandomNumber, ' is less than 0.5')
+        } else {
+            console.log(mathRandomNumber, ' is greater than 0.5')
+        }
+
+        /*
+            Esto nos da el resultado que buscamos, pero no es la mejor manera de hacerlo
+            Estamos REPITIENDO CÓDIGO, lo cual nunca es bueno
+
+            ¿Si quisieramos que el programa nos devuelva 100 números?
+            deberíamos repetir 100 veces el bloque de código de arriba, lo cuál sería demasiado
+
+            La idea de la programación es AUTOMATIZAR PROCESOS
+
+            Un buen código es CONCISO y SENCILLO (entendible)
+        */
+
+    </script>
+</body>
+</html>

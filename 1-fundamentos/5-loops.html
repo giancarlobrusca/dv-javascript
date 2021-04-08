@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - FOR AND WHILE (Loops/Bucles)</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /* FOR
+            Usamos FOR cuando conocemos la condición de inicio del bucle y la 
+            condición de cierre.
+
+            Por ejemplo: Si queremos que un bloque de código se ejecute 10 veces.
+        */
+
+        /* WHILE
+            Usamos WHILE cuando la condición que estamos evaluando depende de factores
+            que no podemos controlar
+
+            Por ejemplo: Cuando la condición es más elaborada y depende de una secuencia
+            de variables, mejor usar WHILE.
+        */
+
+        // IS LESS OR IS GREATER
+
+        var mathRandomNumber;
+
+        /* for (1;2;3)
+            1 -> Lo que se va a ejecutar al principio
+            2 -> La condición que permite que el loop siga
+            3 -> Lo que se va a ejecutar al final de cada vuelta
+        */
+
+       for (var i = 0 ; i < 10 ; i++) {
+           // i++ === ++i === i+=1 === i = i+1
+           
+           mathRandomNumber = Math.random()
+           if (mathRandomNumber <= 0.5) {
+               console.log(i + ' ' + mathRandomNumber, 'is less than 0.5')
+            } else {
+                // Template literal
+                console.log(`${i} ${mathRandomNumber} is greater than 0.5`)
+            }
+        }
+        
+        /*
+            Quizás sería más intuitivo hacer -> for (var 1 = 10 ; i <= 10 ; i++)
+            Pero en programación se acostumbra a empezar por 0
+            porque en casi todos los lenguajes, la primer posición de un array es 0
+            
+            array -> ['a', 'b', 'c']
+            'a' es 0
+        */
+
+        /* WHILE
+            1
+            1 + 1       2
+            2 + 2       4
+            4 + 4       8
+            100
+        */
+       var x = 1;
+       while (x < 100) {
+           console.log(x) // Esto solo === Bucle infinito
+           x = x + x // x + x === x * 2
+       }
+
+    </script>
+</body>
+</html>

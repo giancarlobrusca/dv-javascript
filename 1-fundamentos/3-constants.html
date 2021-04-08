@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 - CONSTANTS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a = 5;
+        // a -> es un identificador
+        
+        // Los identificadores pueden ser más extensos
+        // Siempre hay que tratar de que sean bien DESCRIPTIVOS
+
+        var abc = 5; 
+
+        // Calcular el Àrea de un Círculo
+        // Fórmula: Pi * Radio²
+
+        // const PI = 3.14159;
+        // PI = 7; -> Esto da error, no se puede asignar valor nuevo a una constante
+
+        /* Objeto Math:
+            Objeto nativo de JS que incluye varias constantes y métodos matemáticos
+            Entre esas constantes está el número Pi.
+        */
+
+        const PI = Math.PI
+
+
+        /*
+            Los nombres de constantes con mayúscula eran una convensión que se usaba antes
+            cuando solo existía VAR para poder identificar las variables que no debían ser
+            modificadas. Ahora por suerte existe CONST que crea una constante inmutable.
+        */
+
+        var radio;
+
+        radio = 6;
+        
+        var area = PI * radio * radio
+
+        console.log('Área del círculo:', area)
+    </script>
+</body>
+</html>

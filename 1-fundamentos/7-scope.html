@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - SCOPE</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // SCOPE
+
+        // var mathRandomNumber = 50; // Variable global
+
+        function printGreaterOrLess() {
+            var mathRandomNumber = Math.random()
+            // con var -> creo una variable local y le asigno valor
+            // sin var -> le cambio el valor a la variable global
+
+            /*
+                sin var y sin valor global -> MALA PRACTICA
+                va a seguir funcionando pero estaremos creando
+                una variable GLOBAL desde dentro de una función (LOCAL)
+                
+                Podemos generar efectos colaterales o errores
+                sin querer
+            */
+            
+            if (mathRandomNumber <= 0.5) {
+                console.log(mathRandomNumber, 'is less than 0.5')
+             } else {
+                 // Template literal
+                 console.log(`${mathRandomNumber} is greater than 0.5`)
+             }
+        }
+        printGreaterOrLess()
+
+        function getResult() {
+            var mathRandomNumber = Math.random()
+            // Esta variable tiene el mismo nombre de la de arriba, es posible por el SCOPE
+
+            if (mathRandomNumber <= 0.5) {
+                return `${mathRandomNumber} is less than 0.5`
+             } else {
+                 return `${mathRandomNumber} is greater than 0.5`
+             }
+        }
+
+        console.log(mathRandomNumber); // Error: Not defined.
+    </script>
+</body>
+</html>

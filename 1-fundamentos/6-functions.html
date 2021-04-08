@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 - FUNCTIONS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // FUNCTIONS
+
+        // FOR QUE INVOCA A UNA FUNCTION PARA QUE INVOQUE SENTENCES (console.log)
+        for (var i = 0 ; i < 10 ; i++) {
+           printGreaterOrLess();
+        }
+        
+        // FUNCIÓN RÍGIDA: NO DEVUELVE EL RESULTADO QUE GENERA
+        // NO PERMITE UTILIZARSE PARA OTROS CASOS
+        function printGreaterOrLess() {
+            var mathRandomNumber = Math.random()
+
+            if (mathRandomNumber <= 0.5) {
+                console.log(mathRandomNumber, 'is less than 0.5')
+             } else {
+                 // Template literal
+                 console.log(`${mathRandomNumber} is greater than 0.5`)
+             }
+        }
+        // console.log(printGreaterOrLess());
+        printGreaterOrLess();
+
+        // FOR QUE USA UNA FUNCTION PARA OBTENER UN VALOR RETORNADO
+        for (var i = 0 ; i < 10 ; i++) {
+           var result = getResult();
+           console.log(`${i} ${result}`);
+        }
+
+        // ESTA FUNCIÓN ES MÁS FLEXIBLE
+        // REALIZA UN CÁLCULO Y DEVUELVE UN RESULTADO
+        function getResult() {
+            var mathRandomNumber = Math.random()
+
+            if (mathRandomNumber <= 0.5) {
+                return `${mathRandomNumber} is less than 0.5`
+             } else {
+                 return `${mathRandomNumber} is greater than 0.5`
+             }
+        }
+        console.log(getResult())
+        // getResult(); // Devuelve el valor (se ejecuta) pero no lo imprime
+    </script>
+</body>
+</html>
