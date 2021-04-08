@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock, Paper or Scissors</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section id="computer-zone">
+        <img id="computerChoice" src="imgs/paper.png" alt="paper" />
+      </section>
+
+      <!-- <p id="result">PERDISTE</p> -->
+
+      <!-- TAREA -->
+      <p id="result">
+        You won/lost/draw with ${playerChoice} against ${computerChoice}
+      </p>
+      <p id="counter">You won N times. You lost N times</p>
+
+      <!-- Y SI SE ANIMAN -->
+      <p id="counter">0 - 0</p>
+      <!-- EL PRIMERO QUE LLEGA A 3 ES EL GANADOR -->
+
+      <section id="player-zone">
+        <img id="playerChoice" src="imgs/rock.png" alt="rock" />
+      </section>
+
+      <section>
+        <button data-choice="rock">
+          <img src="imgs/rock.png" alt="rock" />
+        </button>
+        <button data-choice="paper">
+          <img src="imgs/paper.png" alt="paper" />
+        </button>
+        <button data-choice="scissors">
+          <img src="imgs/scissors.png" alt="scissors" />
+        </button>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
